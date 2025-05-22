@@ -6,10 +6,16 @@
     <title>The heart</title>
     <style src = "Style.css"></style>
     <script src= "App.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <div class="heart">
-        <3
+    <div>
+        <label for="kValue">
+            k = <span id="kLabel">0</span>
+        </label>
+        <input type="range" id="kValue" min="-100" max="100" value="0" step="1" oninput="updateKLabelAndPlot()" />
+        <div id="plot"></div>
     </div>
 </body>
 </html>
